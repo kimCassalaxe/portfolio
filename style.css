@@ -1,0 +1,455 @@
+:root{
+  --baseColor:#f7f5f8;
+  --barColor:#f7f5f8b3;
+  --textColor:#1c2231;
+  --text:#4b5563;
+  --text-header:#4b556338;
+  --btnColor:#8c25f4;
+  --btnColorHover:#a249fa;
+  --btnColortwe:#ccced1;
+  --btnColortweHover:#d4d8dd;
+  --white:#ffffff;
+} 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Roboto", Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+input, textarea, button{
+  outline: none;
+  border: none;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: var(--textColor);
+}
+li{
+  list-style: none;
+}
+label,#btnMenu{
+  display: none;
+}
+.container{
+  background-color: var(--baseColor);
+}
+.header{
+  width: 100%;
+  padding: 15px 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: var(--barColor);
+  backdrop-filter: blur(10px);
+  gap:20%;
+}
+.logo{
+  
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap:5px;
+}
+
+.logo > span.name{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color:var(--textColor)
+}
+.logo-word{
+  font-size:30px;
+  font-weight: 900;
+  color:var(--btnColor)
+}
+.menuBar{
+  width: 100%;
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuBar > ul{
+  display: flex;
+  gap:10px;
+
+}
+.menuBar > ul>li{
+  padding: 5px 10px;
+}
+.menuBar > ul>li>a{
+  color: var(--textColor);
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.5s color;
+}
+.menuBar>ul>li>a:hover{
+  color: var(--btnColor);
+}
+.menuBar>a{
+  color:#fff;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: var(--btnColor);
+}
+.banner{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.banner h1{
+  margin-top: 40px;
+  width: 40%;
+  line-height: 60px;
+  font-size: 4em;
+}
+.banner p{
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 25px;
+}
+.banner a{
+  margin: 8px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: var(--textColor);
+  background-color: var(--btnColortwe);
+  transition: 0.5s background-color;
+}
+
+.banner a.btnProject{
+   color: var(--baseColor);
+  background-color: var(--btnColor);
+}
+
+.banner a.downloadBtnCV:hover{
+
+  color: var(--textColor);
+  background-color: var(--btnColortweHover);
+}
+.banner a.btnProject:hover{
+  color: var(--baseColor);
+  background-color: var(--btnColorHover);
+}
+
+.About{
+  width: 100%;
+  padding: 40px 10%;
+  gap: 20px;
+}
+.About .description{
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  justify-content: space-between;
+
+}
+.About .description .about-text{
+  flex: 0.5;
+}
+.About .description .about-text h2{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.description .about-text p{
+  font-weight: 300;
+  line-height: 25px;
+  font-size: 1.2em;
+  padding:60px auto;
+}
+.description .about-img{
+  flex: 0.5;
+}
+.description .about-img img{
+  width: 100%;
+  border-radius: 20px;
+  height: fit-content;
+}
+.About .habilitys{
+  padding: 40px 0px;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 20px;
+}
+.habilityCard{
+  border: solid 1px var(--text-header);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  color: var(--textColor);
+
+}.habilityCard span{
+  font-size: 2rem;
+  color: var(--btnColor);
+  margin-bottom: 20px;
+}
+.habilityCard h4{
+  font-size:1.2rem;
+  color: var(--textColor);
+  margin-bottom: 10px;
+
+}
+.habilityCard p{  
+  font-weight: 300;
+  font-size: .9rem;
+  margin-bottom: 10px;
+  opacity: .5;
+}
+.project{
+  width: 100%;
+  padding: 20px 10%;
+}
+.project h2 ,.Experienc h2{
+  font-size: 2.5em;
+  margin-bottom: 20px;
+
+}
+.projectsBox{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.projectCard{
+  padding: 5px;
+}
+.projectCard-img{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+.projectCard-img img{
+  box-shadow: 1px 1px 10px #1c223173;
+  margin:20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.projectCard h4{
+  font-size: 20px;
+  margin: 10px auto;
+}
+.projectCard p{
+  font-weight: 300;
+  font-size: .9rem;
+  margin-bottom: 10px;
+  opacity: .5;
+}
+.tags{
+  color:var(--btnColor);
+  opacity: 1;
+  font-weight: 400;
+}
+
+.Experienc{
+  width: 100%;
+  padding: 40px 10%;
+}
+.ExperiencBox{
+  width: 100%;
+  height: 400px;
+}
+.lineV{
+  background-color:var(--text);
+  width: 20px;
+  height: 100%;
+  position: relative;
+  top: 0 ;
+  left: 50%;
+z-index: 99;
+}
+.pont{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px ;
+  left: calc(50% - 5px);
+  background-color:var(--btnColor);
+}
+.pont-0{
+  top: calc(10px*1) ;
+}
+.pont-1{
+  top: calc(10px*14) ;
+}
+.pont-2{
+   top: calc(10px*28) ;;
+}
+.experencList{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.itemListBox{
+  padding: 10px 0px;
+  width: 50%;
+}
+.itemListBox-0{
+  align-self: flex-start;
+text-align: right;
+  padding-right:30px;
+}
+.itemListBox-1{
+  align-self: flex-end;
+  text-align: left;
+  padding-left:30px;
+}
+.itemListBox .itemList p.date{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.itemListBox .itemList h5.position{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.itemListBox .itemList p.company{
+  font-family: "Sentury Gothic",'Franklin Gothic Medium' ;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.itemListBox .itemList p.description{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+.contact{
+  width: 100%;
+  padding: 40px 10% ;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.contactBox{
+  background-color: var(--white);
+  padding: 50px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px ;
+  border-radius: 20px;
+  width: 100%;
+  margin: 20px;
+}
+.contactBox .textBox{
+  flex: 0.5;
+  align-self: start;
+}
+.contactBox .textBox h2{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+
+}
+.contactBox .textBox p.description{
+  color: var(--text);
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 25px;
+  padding:60px auto;
+}
+.links{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.links a{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.links a img{
+  width: 100%;
+  height: 100%;
+}
+.form{
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.form .input{
+  padding:15px;
+  font-size: 1em;
+  border-radius: 15px;
+  background-color:var(--baseColor);
+  border: solid 1px var(var(--btnColortweHover));
+}
+.form .input[type="button"]{
+  background-color: var(--btnColor);
+  color: var(--baseColor);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s background-color;
+}
+.form .input[type="button"]:hover{
+  background-color: var(--btnColorHover);
+}
+@media (max-width:870px) {
+  
+  .menuBar{
+    display: none;
+    position:absolute;
+    padding: 40px 20px;
+    top: 50px;
+    right: 0;
+    background-color: #1c2231;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 30px;
+    
+  }
+  .menuBar>ul{
+    display: inline;
+color: #f7f5f8;
+   }
+   .menuBar>ul>li>a{
+color: #f7f5f8;
+   }
+
+  .About{
+    flex-direction: column-reverse;
+
+}
+.About .about-img img{
+  width: 100%;
+  height: fit-content;
+}
+}
