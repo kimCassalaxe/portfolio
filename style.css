@@ -1,6 +1,7 @@
 :root{
   --baseColor:#f7f5f8;
   --barColor:#f7f5f8b3;
+  --barBColor:#d6d3d8;
   --textColor:#1c2231;
   --text:#4b5563;
   --text-header:#4b556338;
@@ -50,6 +51,7 @@ label,#btnMenu{
   background-color: var(--barColor);
   backdrop-filter: blur(10px);
   gap:20%;
+  z-index: 1000;
 }
 .logo{
   
@@ -76,6 +78,7 @@ label,#btnMenu{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 .menuBar > ul{
@@ -197,10 +200,9 @@ label,#btnMenu{
   border: solid 1px var(--text-header);
   border-radius: 15px;
   padding: 20px;
-  background-color: #fff;
   color: var(--textColor);
   transition: .5s scale;
-
+  z-index: 100;
 }
 .habilityCard:hover{
   scale: 1.05;
@@ -250,7 +252,8 @@ label,#btnMenu{
 .projectCard-img img{
   box-shadow: 1px 1px 10px #1c223173;
   margin:20px;
-  width: 100%;
+  width:fit-content;
+  max-width: 100% ;
   height: 100%;
   border-radius: 10px;
 }
@@ -429,7 +432,8 @@ text-align: right;
   }
   .menuBar{
     display: none;
-    width: 0;
+    
+    width: 50%;
     opacity: 0;
     align-items: start;
     flex-direction: column;
@@ -437,15 +441,14 @@ text-align: right;
     gap: 30px;
     padding: 40px 20px;
     position:absolute;
-    top: 70px;
+    top: 65px;
     right: 0px;
-     transition: 1.5s opacity;
+    transition: 1.5s opacity;
   }
   #btnMenu:checked ~ .menuBar{
     opacity: 1;
-    width: fit-content;
     display: flex;
-    background-color: var(--textColor);
+    background-color: var(--barBColor);
   }
   
  
@@ -456,17 +459,17 @@ text-align: right;
    }
   .menuBar>ul>li{
     border-bottom: 1px solid transparent;
-    color: #f7f5f8;
+    color: var(--text-header);
     font-size: 1rem;
     transition: .5s border-color;
    }
    .menuBar>ul>li:hover{
-    border-color:var(--barColor);
-    color: #f7f5f8;
+    border-color:var(--text-header);
+
     font-size: 1rem;
    }
    .menuBar>ul>li>a{
-color: #f7f5f8;
+color:var(--text-header);
 font-size: 1rem;
    }
 
@@ -475,7 +478,7 @@ font-size: 1rem;
   
 }
    .banner h1{
-  margin-top: 100px;
+    margin-top: 100px;
   width: 60%;
   line-height:25px;
   font-size: 1.4em;
@@ -554,3 +557,4 @@ footer span{
   text-align: center;
 }
 }
+ 
