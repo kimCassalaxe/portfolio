@@ -5,8 +5,8 @@
   --textColor:#1c2231;
   --text:#4b5563;
   --text-header:#4b556338;
-  --btnColor:#8c25f4;
-  --btnColorHover:#a249fa;
+--btnColor: #7a1fe0;
+--btnColorHover: #8f35f0;
   --btnColortwe:#ccced1;
   --btnColortweHover:#d4d8dd;
   --white:#ffffff;
@@ -394,6 +394,10 @@ text-align: right;
   gap: 20px;
   width: 100%;
 }
+.contactBox{
+  display: flex;
+  flex-direction: column;
+}
 .form .input{
   padding:15px;
   font-size: 1em;
@@ -411,6 +415,15 @@ text-align: right;
 .form .input[type="button"]:hover{
   background-color: var(--btnColorHover);
 }
+footer{
+  
+  padding: 20px;
+  text-align: center;
+  font-size: .8rem;
+  opacity: .6;
+}
+
+/*mobile*/
 @media (width<=870px) {
   .header,.banner,.project,.Experienc,.contact{
     padding: 15px 5%;
